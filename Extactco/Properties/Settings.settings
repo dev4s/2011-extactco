@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Extactco.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ServerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="Port" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">14330</Value>
+    </Setting>
+    <Setting Name="DatabaseName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Extactco</Value>
+    </Setting>
+    <Setting Name="Login" Type="System.String" Scope="User">
+      <Value Profile="(Default)">extactco_test</Value>
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">õäòõ°³²µ</Value>
+    </Setting>
+    <Setting Name="FilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\</Value>
+    </Setting>
+    <Setting Name="Select1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">select * from tab1 
+/* zawsze dodawajcie poniższe, inaczej będzie bez filtrowania */
+where [FS.DATA] between @DATEFROM and @DATETO
+/* to też dodawajcie ;) */
+order by [FS.DATA];</Value>
+    </Setting>
+    <Setting Name="Select2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">/* program sprawdza czy to pole nie jest puste, lub czy "wynik" zapytania nie jest pusty
+    jeżeli tak, to wtedy nie wpisuje wartości VAT
+*/
+select * from tab2
+/* poniższe ma być dodane do selecta 2 inaczej nie będzie filtorwał po ID */
+where [ID2] = @PARENTID;</Value>
+    </Setting>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
